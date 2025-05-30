@@ -21,8 +21,12 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-green-800">
-              ECONUT
+            <a href="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/9d6b336d-213b-44ce-bd5a-0ccafd7fd63d.png" 
+                alt="ECONUT Logo" 
+                className="h-10 w-auto"
+              />
             </a>
           </div>
 
