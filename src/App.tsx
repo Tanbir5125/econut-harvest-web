@@ -10,6 +10,7 @@ import Products from "./pages/Products";
 import Impact from "./pages/Impact";
 import Contact from "./pages/Contact";
 import Investors from "./pages/Investors";
+import RuralEmpowerment from "./pages/RuralEmpowerment";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/impact" element={<Impact />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/investors" element={<Investors />} />
+          <Route path="/rural-empowerment" element={<RuralEmpowerment />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
