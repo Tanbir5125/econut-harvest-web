@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Leaf, Users, Award } from "lucide-react";
 
 const Index = () => {
   return (
@@ -13,43 +13,71 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-50 to-amber-50 min-h-screen flex items-center">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=1920&h=1080&fit=crop')"
           }}
         />
         <div className="relative container mx-auto px-4 py-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-bold text-5xl md:text-6xl lg:text-7xl text-green-900 mb-6 leading-tight">
-              Empowering Farmers,<br />
-              <span className="text-amber-700">Nourishing Lives</span><br />
-              with Organic Coconut Products
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="mb-6">
+              <span className="inline-block px-4 py-2 bg-green-100 text-green-800 font-semibold rounded-full text-sm mb-4">
+                Premium Organic Products
+              </span>
+            </div>
+            <h1 className="font-bold text-4xl md:text-6xl lg:text-7xl text-green-900 mb-8 leading-tight">
+              From Farm to Your Table
             </h1>
-            <p className="text-xl md:text-2xl text-green-800 mb-8 max-w-3xl mx-auto leading-relaxed">
-              ECONUT connects coconut farmers directly to markets, promoting sustainable agriculture 
-              and delivering premium organic coconut products from Karnataka's finest farms.
+            <p className="text-xl md:text-2xl text-green-700 mb-12 max-w-2xl mx-auto font-medium">
+              Connecting Karnataka's finest coconut farmers directly with conscious consumers
             </p>
+            
+            {/* Key Stats */}
+            <div className="grid grid-cols-3 gap-8 mb-12 max-w-lg mx-auto">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <Leaf className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold text-green-900">100%</div>
+                <div className="text-sm text-green-700">Organic</div>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold text-green-900">500+</div>
+                <div className="text-sm text-green-700">Farmers</div>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <Award className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold text-green-900">A+</div>
+                <div className="text-sm text-green-700">Quality</div>
+              </div>
+            </div>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 text-lg font-semibold"
+                className="bg-green-700 hover:bg-green-800 text-white px-10 py-4 text-lg font-semibold rounded-full"
                 onClick={() => window.location.href = '/products'}
               >
-                Shop Now
+                Shop Products
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-green-700 text-green-700 hover:bg-green-50 px-8 py-4 text-lg font-semibold"
+                className="border-2 border-green-700 text-green-700 hover:bg-green-50 px-10 py-4 text-lg font-semibold rounded-full"
                 onClick={() => window.location.href = '/about'}
               >
-                Learn More
+                Our Story
               </Button>
             </div>
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-8 h-8 text-green-700" />
+          <ArrowDown className="w-6 h-6 text-green-700" />
         </div>
       </section>
 
@@ -59,55 +87,52 @@ const Index = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-green-900 mb-6">
-                Our Mission & Impact
+                Why Choose ECONUT
               </h2>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Transforming lives through sustainable coconut farming and direct market access
+              <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+                Experience the difference of authentic, farm-fresh coconut products
               </p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border-green-200 hover:shadow-lg transition-shadow">
-                <CardHeader className="text-center">
+              <Card className="border-green-200 hover:shadow-lg transition-shadow text-center">
+                <CardHeader>
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">🌱</span>
                   </div>
-                  <CardTitle className="text-green-900">Sustainable Agriculture</CardTitle>
+                  <CardTitle className="text-green-900">Sustainable Farming</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-gray-600 text-center">
-                    Promoting organic farming practices that protect the environment while ensuring 
-                    quality coconut products for health-conscious consumers.
+                  <CardDescription className="text-gray-600">
+                    100% organic practices that protect the environment and ensure premium quality
                   </CardDescription>
                 </CardContent>
               </Card>
 
-              <Card className="border-amber-200 hover:shadow-lg transition-shadow">
-                <CardHeader className="text-center">
+              <Card className="border-amber-200 hover:shadow-lg transition-shadow text-center">
+                <CardHeader>
                   <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">🤝</span>
                   </div>
-                  <CardTitle className="text-amber-800">Direct Market Access</CardTitle>
+                  <CardTitle className="text-amber-800">Direct Trade</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-gray-600 text-center">
-                    Eliminating middlemen to ensure farmers receive fair prices while providing 
-                    consumers with authentic, fresh coconut products.
+                  <CardDescription className="text-gray-600">
+                    Fair prices for farmers, fresh products for you - no middlemen involved
                   </CardDescription>
                 </CardContent>
               </Card>
 
-              <Card className="border-green-200 hover:shadow-lg transition-shadow">
-                <CardHeader className="text-center">
+              <Card className="border-green-200 hover:shadow-lg transition-shadow text-center">
+                <CardHeader>
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">💪</span>
                   </div>
-                  <CardTitle className="text-green-900">Rural Employment</CardTitle>
+                  <CardTitle className="text-green-900">Community Impact</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-gray-600 text-center">
-                    Creating job opportunities and training programs for youth in rural areas, 
-                    building stronger farming communities across Karnataka.
+                  <CardDescription className="text-gray-600">
+                    Supporting rural communities and creating sustainable livelihoods
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -122,10 +147,10 @@ const Index = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-green-900 mb-6">
-                Premium Organic Products
+                Featured Products
               </h2>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-                Discover our range of authentic coconut products, sourced directly from Karnataka's finest farms
+              <p className="text-xl text-gray-700 max-w-2xl mx-auto mb-8">
+                Discover our premium coconut products, sourced directly from Karnataka's finest farms
               </p>
             </div>
             
@@ -164,7 +189,7 @@ const Index = () => {
             <div className="text-center">
               <Button 
                 size="lg"
-                className="bg-amber-700 hover:bg-amber-800 text-white px-8 py-4 text-lg font-semibold"
+                className="bg-amber-700 hover:bg-amber-800 text-white px-8 py-4 text-lg font-semibold rounded-full"
                 onClick={() => window.location.href = '/products'}
               >
                 View All Products
