@@ -10,7 +10,7 @@ const Navigation = () => {
     { name: "About", href: "/about" },
     { name: "Products", href: "/products" },
     { name: "Impact", href: "/impact" },
-    { name: "Rural Empowerment", href: "/rural-empowerment" },
+    { name: "Fresh Worth", href: "/fresh-worth" },
     { name: "Investors", href: "/investors" },
     { name: "Contact", href: "/contact" },
   ];

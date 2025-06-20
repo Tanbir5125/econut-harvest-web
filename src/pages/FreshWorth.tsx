@@ -1,11 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Users, TrendingUp, Leaf, Heart, Award, Target } from "lucide-react";
 
-const RuralEmpowerment = () => {
+const FreshWorth = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -24,11 +23,11 @@ const RuralEmpowerment = () => {
               Transforming Rural Communities
             </span>
             <h1 className="font-bold text-4xl md:text-6xl text-green-900 mb-8 leading-tight">
-              Rural Empowerment Project
+              Fresh Worth
             </h1>
             <p className="text-xl md:text-2xl text-green-700 mb-12 max-w-3xl mx-auto">
-              Empowering farmers, generating employment, and building sustainable livelihoods 
-              across Karnataka's coconut farming communities
+              Delivering fresh value to farmers, creating meaningful employment, and building 
+              sustainable livelihoods across Karnataka's coconut farming communities
             </p>
             
             {/* Key Impact Stats */}
@@ -63,7 +62,7 @@ const RuralEmpowerment = () => {
                 Transforming Rural Lives
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Our Rural Empowerment Project focuses on creating sustainable economic opportunities 
+                Fresh Worth focuses on creating sustainable economic opportunities 
                 while preserving traditional farming practices and protecting the environment.
               </p>
             </div>
@@ -239,7 +238,7 @@ const RuralEmpowerment = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    "Before joining ECONUT, I was selling my coconuts at ₹12 each to middlemen. 
+                    "Before joining Fresh Worth, I was selling my coconuts at ₹12 each to middlemen. 
                     Now, through direct market access and value addition, I earn ₹25 per coconut. 
                     My monthly income has increased from ₹15,000 to ₹40,000."
                   </p>
@@ -256,7 +255,7 @@ const RuralEmpowerment = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    "Through ECONUT's women empowerment program, I learned coconut oil processing. 
+                    "Through Fresh Worth's women empowerment program, I learned coconut oil processing. 
                     Now I run my own unit employing 15 women from my village. We produce 500 liters 
                     of virgin coconut oil monthly."
                   </p>
@@ -358,4 +357,4 @@ const RuralEmpowerment = () => {
   );
 };
 
-export default RuralEmpowerment;
+export default FreshWorth;
