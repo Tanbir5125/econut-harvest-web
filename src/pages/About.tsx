@@ -13,7 +13,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-green-900 mb-6">
-              About ECONUT
+              About FreshWorth
             </h1>
             <p className="text-xl text-green-800 max-w-3xl mx-auto">
               A Farmer Producer Organization dedicated to empowering coconut farmers 

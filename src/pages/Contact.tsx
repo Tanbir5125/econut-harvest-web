@@ -123,9 +123,9 @@ const Contact = () => {
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-gray-700">
-                        <strong>General Inquiries:</strong> info@econut.com<br />
-                        <strong>Sales & Orders:</strong> sales@econut.com<br />
-                        <strong>Partnerships:</strong> partners@econut.com
+                        <strong>General Inquiries:</strong> info@FreshWorth.com<br />
+                        <strong>Sales & Orders:</strong> sales@FreshWorth.com<br />
+                        <strong>Partnerships:</strong> partners@FreshWorth.com
                       </CardDescription>
                     </CardContent>
                   </Card>
@@ -156,7 +156,7 @@ const Contact = () => {
                     <CardContent>
                       <CardDescription className="text-gray-700">
                         <strong>Head Office:</strong><br />
-                        ECONUT Farmer Producer Organization<br />
+                        FreshWorth Farmer Producer Organization<br />
                         Coconut Processing Center<br />
                         Karnataka, India 560001
                       </CardDescription>
@@ -218,7 +218,7 @@ const Contact = () => {
                 <CardContent>
                   <CardDescription className="text-gray-700">
                     Yes! We welcome B2B partnerships and offer special pricing for bulk orders. Contact our 
-                    sales team at sales@econut.com for wholesale pricing and partnership opportunities.
+                    sales team at sales@FreshWorth.com for wholesale pricing and partnership opportunities.
                   </CardDescription>
                 </CardContent>
               </Card>

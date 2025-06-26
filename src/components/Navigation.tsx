@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
+import logo from "../logo/freshworth.png";
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,8 +25,8 @@ const Navigation = () => {
           <div className="flex items-center">
             <a href="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/9d6b336d-213b-44ce-bd5a-0ccafd7fd63d.png" 
-                alt="ECONUT Logo" 
+                src={logo}
+                alt="FreshWorth Logo" 
                 className="h-10 w-auto"
               />
             </a>

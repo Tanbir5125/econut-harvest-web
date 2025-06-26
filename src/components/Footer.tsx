@@ -58,7 +58,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-green-100 text-sm mb-4 md:mb-0">
             <p>© 2025 Fresh Worth. All rights reserved.</p>
-            <p>Contact: info@econut.com | +91-1234567890</p>
+            <p>Contact: info@FreshWorth.com | +91-1234567890</p>
           </div>
           <div className="text-green-100 text-sm">
             <span>Made with 💚 for sustainable farming</span>
