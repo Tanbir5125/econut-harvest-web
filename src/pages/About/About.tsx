@@ -1,16 +1,12 @@
-import React from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
-import FeaturedProductsSection from "./FeaturedProductsSection";
-import HeroSection from "./HeroSection";
-import Footer from "@/components/Footer";
-import MissionSection from "./MissionSection";
 import Navigation from "@/components/Navigation";
-import { useRef } from "react";
-import SectionTransition from "./section-transition";
+import Footer from "@/components/Footer";
+import AboutHeroSection from "./AboutHeroSection";
+import AboutMissionVisionSection from "./AboutMissionVisionSection";
+import AboutTeamSection from "./AboutTeamSection";
 
-// FloatingParticles component must be outside the main component
+// FloatingParticles component copied from Home/Index.tsx
 function FloatingParticles({ scrollY }: { scrollY: MotionValue<number> }) {
-  // Precompute transforms for each particle at the top level
   const x0 = useTransform(scrollY, [0, 1000], [0, 50]);
   const y0 = useTransform(scrollY, [0, 1000], [0, -100]);
   const opacity0 = useTransform(scrollY, [0, 500, 1000], [0.3, 0.7, 0.2]);
@@ -92,79 +88,19 @@ function FloatingParticles({ scrollY }: { scrollY: MotionValue<number> }) {
   );
 }
 
-const Index = () => {
-  // Create refs for each section to track their positions
-  const heroRef = useRef<HTMLDivElement>(null);
-  const missionRef = useRef<HTMLDivElement>(null);
-  const featuredRef = useRef<HTMLDivElement>(null);
-
-  // Main scroll progress for the entire page
+const About = () => {
   const { scrollY } = useScroll();
-
-  // Hero fades out as you scroll down 0-400px
-  const heroOpacity = useTransform(scrollY, [0, 400], [1, 0.1]);
-
-  // Mission fades in as you scroll down 200-600px
-  const missionOpacity = useTransform(scrollY, [200, 600], [0.1, 1]);
-
-  // Featured fades in as you scroll down 700-1100px
-  const featuredOpacity = useTransform(scrollY, [700, 1100], [0.1, 1]);
-
-  // Scroll progress for transition effects between sections
-  const heroToMissionProgress = useTransform(
-    scrollY,
-    [200, 400], // Adjust these values based on your section heights
-    [0, 1]
-  );
-
-  // Scroll progress for mission to featured transition
-  const missionToFeaturedProgress = useTransform(
-    scrollY,
-    [600, 800], // Adjust these values based on your section heights
-    [0, 1]
-  );
-
-  // Scroll progress indicator
-  const scrollProgress = useTransform(
-    scrollY,
-    [0, document.body.scrollHeight - window.innerHeight || 3000],
-    [0, 1]
-  );
-
   return (
     <div className="min-h-screen bg-white relative">
       <Navigation />
-      // ...scroll progress indicator removed...
-      {/* Floating Particles that follow scroll */}
+      {/* Shimmering Dots Effect */}
       <FloatingParticles scrollY={scrollY} />
-      {/* Main Content Sections */}
-      <div ref={heroRef}>
-        <HeroSection heroOpacity={heroOpacity} />
-      </div>
-      {/* Transition Element between Hero and Mission */}
-      <SectionTransition
-        scrollProgress={heroToMissionProgress}
-        fromColor="from-amber-50/50"
-        toColor="to-white/10"
-        dividerColor="bg-gradient-to-r from-transparent via-green-300/50 to-transparent"
-      />
-      <div ref={missionRef}>
-        <MissionSection missionOpacity={missionOpacity} />
-      </div>
-      {/* Transition Element between Mission and Featured */}
-      <SectionTransition
-        scrollProgress={missionToFeaturedProgress}
-        fromColor="from-green-50/50"
-        toColor="to-white/10"
-        dividerColor="bg-gradient-to-r from-transparent via-amber-300/50 to-transparent"
-        height={32}
-      />
-      <div ref={featuredRef}>
-        <FeaturedProductsSection featuredOpacity={featuredOpacity} />
-      </div>
+      <AboutHeroSection />
+      <AboutMissionVisionSection />
+      <AboutTeamSection />
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default About;

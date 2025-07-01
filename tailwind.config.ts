@@ -18,11 +18,11 @@ export default {
 				'2xl': '1400px'
 			}
 		},
-		extend: {
-			fontFamily: {
-				'sans': ['Inter', 'system-ui', 'sans-serif'],
-				'heading': ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
-			},
+			extend: {
+				fontFamily: {
+					'sans': ['Open Sans', 'system-ui', 'sans-serif'],
+					'heading': ['Aileron', 'Open Sans', 'system-ui', 'sans-serif'],
+				},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

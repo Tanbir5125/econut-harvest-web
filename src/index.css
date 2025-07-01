@@ -1,3 +1,4 @@
+@import url('./fonts.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -102,24 +103,95 @@
 
 @layer utilities {
   @keyframes footer-shimmer {
-    0% { transform: translateY(-20%); }
-    100% { transform: translateY(20%); }
+    0% {
+      transform: translateY(-20%);
+    }
+
+    100% {
+      transform: translateY(20%);
+    }
   }
+
   .animate-footer-shimmer {
     animation: footer-shimmer 6s linear infinite alternate;
   }
+
   @keyframes footer-logo-shimmer {
-    0%, 100% { filter: drop-shadow(0 0 8px #fbbf24) brightness(1.1); }
-    50% { filter: drop-shadow(0 0 24px #fbbf24) brightness(1.3); }
+
+    0%,
+    100% {
+      filter: drop-shadow(0 0 8px #fbbf24) brightness(1.1);
+    }
+
+    50% {
+      filter: drop-shadow(0 0 24px #fbbf24) brightness(1.3);
+    }
   }
+
   .animate-footer-logo-shimmer {
     animation: footer-logo-shimmer 3s ease-in-out infinite;
   }
+
   @keyframes footer-heart-shimmer {
-    0%, 100% { color: #fbbf24; }
-    50% { color: #f59e42; }
+
+    0%,
+    100% {
+      color: #fbbf24;
+    }
+
+    50% {
+      color: #f59e42;
+    }
   }
+
   .animate-footer-heart-shimmer {
     animation: footer-heart-shimmer 2s ease-in-out infinite;
   }
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-hero-fadein {
+  animation: heroFadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+@keyframes gradientFade {
+
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.animate-gradient-fade {
+  animation: gradientFade 8s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
