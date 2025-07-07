@@ -127,7 +127,16 @@ const ProductsQualityPromiseSection = () => {
               </span>
             </motion.div>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-800 via-amber-700 to-green-800 bg-clip-text text-transparent">
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-800 via-amber-700 to-green-800 bg-clip-text text-transparent"
+              style={{
+                WebkitTextFillColor: "transparent",
+                overflowWrap: "anywhere",
+                wordBreak: "break-word",
+                lineHeight: 1.3,
+                WebkitBoxDecorationBreak: "clone",
+              }}
+            >
               Our Quality Promise
             </h2>
 

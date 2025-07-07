@@ -200,7 +200,7 @@ const AboutMissionVisionSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-500 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
               <div className="relative bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80"
+                  src="/lovable-uploads/vision.jpeg"
                   alt="Vision for the future"
                   className="w-full h-96 lg:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
