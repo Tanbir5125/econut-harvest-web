@@ -108,9 +108,21 @@ const FreshWorthImpactMetrics = () => (
               className={`relative group rounded-3xl shadow-xl border border-green-100 p-8 flex flex-col items-center bg-gradient-to-br ${metric.gradient}`}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.07, boxShadow: `0 0 0 8px var(--tw-shadow-color,rgba(0,0,0,0.08)), 0 8px 32px 0 ${metric.shadow.replace('shadow-', '').replace('/60','').replace('-','')}` }}
+              whileHover={{
+                scale: 1.07,
+                boxShadow: `0 0 0 8px var(--tw-shadow-color,rgba(0,0,0,0.08)), 0 8px 32px 0 ${metric.shadow
+                  .replace("shadow-", "")
+                  .replace("/60", "")
+                  .replace("-", "")}`,
+              }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: metric.delay, type: "spring", stiffness: 300, damping: 20 }}
+              transition={{
+                duration: 0.7,
+                delay: metric.delay,
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              }}
             >
               <div className="w-20 h-20 rounded-full overflow-hidden flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-500 border-4 border-white bg-white/40">
                 <img
@@ -143,7 +155,9 @@ const FreshWorthImpactMetrics = () => (
               >
                 {metric.label}
               </h3>
-              <p className="text-gray-700 text-center text-sm font-medium drop-shadow-sm">{metric.desc}</p>
+              <p className="text-gray-700 text-center text-sm font-medium drop-shadow-sm">
+                {metric.desc}
+              </p>
               {/* Decorative accent */}
               <motion.div
                 className={`absolute -bottom-2 left-1/2 -translate-x-1/2 w-12 h-1 rounded-full ${metric.accent} opacity-50 group-hover:opacity-80`}
